@@ -1,4 +1,9 @@
-﻿namespace MyWallWebAPI {
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace MyWallWebAPI {
     public class Post //Entidade POST
     {
         //Atributos da entidade
@@ -8,3 +13,4 @@
         public DateTime Data { get; set; }
     }
 }
+
