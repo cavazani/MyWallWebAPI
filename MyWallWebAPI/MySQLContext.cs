@@ -1,10 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MyWallWebAPI.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MyWallWebAPI {
+namespace MyWallWebAPI
+{
     public class MySQLContext : DbContext {
         public MySQLContext(DbContextOptions<MySQLContext> options) : base(options) {
         }

@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MyWallWebAPI.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MyWallWebAPI {
+namespace MyWallWebAPI
+{
     [Route("api/[controller]")]
     [ApiController]
     public class PostController : ControllerBase {
