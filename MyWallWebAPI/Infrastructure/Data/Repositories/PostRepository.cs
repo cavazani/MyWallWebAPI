@@ -17,13 +17,15 @@ namespace MyWallWebAPI.Infrastructure.Data.Repositories {
             return list;
         }
 
-        public async Task<Post> GetPost(int postId) {
+        public async Task<Post> GetPost(int postId)
+        {
             Post post = await _context.Post.FindAsync(postId);
 
             return post;
         }
 
-        public async Task<Post> CreatePost(Post post) {
+        public async Task<Post> CreatePost(Post post)
+         {
             var ret = await _context.Post.AddAsync(post);
 
             await _context.SaveChangesAsync();
@@ -33,13 +35,15 @@ namespace MyWallWebAPI.Infrastructure.Data.Repositories {
             return ret.Entity;
         }
 
-        public async Task<int> UpdatePost(Post post) {
+        public async Task<int> UpdatePost(Post post) 
+        {
             _context.Entry(post).State = EntityState.Modified;
 
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<bool> DeletePost(int postId) {
+        public async Task<bool> DeletePost(int postId) 
+        {
             var item = await _context.Post.FindAsync(postId);
             _context.Post.Remove(item);
 
