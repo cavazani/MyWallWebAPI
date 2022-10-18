@@ -13,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MyWallWebAPI.Domain.Models;
 using MyWallWebAPI.Domain.Services;
+using MyWallWebAPI.Infrastructure.Data.Contexts;
 using MyWallWebAPI.Infrastructure.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyWallWebAPI {
+namespace MyWallWebAPI
+{
     public class Startup {
         public Startup(IConfiguration configuration) {
             Configuration = configuration;

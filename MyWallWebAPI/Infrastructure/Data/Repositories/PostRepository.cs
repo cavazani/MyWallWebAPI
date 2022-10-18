@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyWallWebAPI.Domain.Models;
+using MyWallWebAPI.Infrastructure.Data.Contexts;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace MyWallWebAPI.Infrastructure.Data.Repositories {
+namespace MyWallWebAPI.Infrastructure.Data.Repositories
+{
     public class PostRepository {
         private readonly MySQLContext _context;
 
