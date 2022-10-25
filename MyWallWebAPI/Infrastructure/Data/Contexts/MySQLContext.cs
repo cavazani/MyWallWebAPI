@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyWallWebAPI.Domain.Models;
 using System;
@@ -9,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace MyWallWebAPI {
     public class MySQLContext : IdentityDbContext<ApplicationUser> {
-
         public MySQLContext(DbContextOptions<MySQLContext> options) : base(options) {
         }
 

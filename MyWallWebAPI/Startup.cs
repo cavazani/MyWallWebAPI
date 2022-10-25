@@ -5,15 +5,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MyWallWebAPI.Domain.Models;
 using MyWallWebAPI.Domain.Services;
-using MyWallWebAPI.Infrastructure.Data.Contexts;
 using MyWallWebAPI.Infrastructure.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -72,8 +67,7 @@ namespace MyWallWebAPI
             services.AddScoped<PostRepository>();
             services.AddScoped<PostService>();
 
-            services.AddScoped<UserRepository>();
-            services.AddScoped<AuthService>();
+
 
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MyWallWebAPI", Version = "v1" });
