@@ -8,8 +8,7 @@ using MyWallWebAPI.Infrastructure.Data.Contexts;
 
 #nullable disable
 
-namespace MyWallWebAPI.Migrations
-{
+namespace MyWallWebAPI.Migrations {
     [DbContext(typeof(MySQLContext))]
     [Migration("20221011214320_Initial")]
     partial class Initial

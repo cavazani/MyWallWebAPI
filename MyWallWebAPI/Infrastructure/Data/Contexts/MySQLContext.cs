@@ -1,22 +1,27 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using MyWallWebAPI.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MyWallWebAPI.Infrastructure.Data.Contexts
-{
-    public class MySQLContext : DbContext
-    {
-        public MySQLContext(DbContextOptions<MySQLContext> options) : base(options)
-        {
-        }
-        //Entidade Post com nome da variavel de Post
-        public DbSet<Post> Post { get; set; }
+namespace MyWallWebAPI {
+    public class MySQLContext : IdentityDbContext<ApplicationUser> {
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
+        public MySQLContext(DbContextOptions<MySQLContext> options) : base(options) {
+        }
+
+        public DbSet<Post> Post { get; set; }
+        public DbSet<ApplicationUser> User { get; set; }
+        public DbSet<ApplicationRole> Role { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder) {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<ApplicationUser>().ToTable("AspNetUsers").HasKey(t => t.Id);
+
             modelBuilder.Entity<Post>();
         }
     }

@@ -7,8 +7,7 @@ using MyWallWebAPI.Infrastructure.Data.Contexts;
 
 #nullable disable
 
-namespace MyWallWebAPI.Migrations
-{
+namespace MyWallWebAPI.Migrations {
     [DbContext(typeof(MySQLContext))]
     partial class MySQLContextModelSnapshot : ModelSnapshot
     {
